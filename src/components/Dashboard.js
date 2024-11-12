@@ -1,19 +1,14 @@
 import React from "react";
 import Search from "../roboApp/searchBoxComponent";
-import 'tachyons';
+import "tachyons";
 
-
-
-
-function Dashboard (){  
+function Dashboard() {
   return (
     <div className="tc white">
-    <h1> Robo freinds website</h1>
-    <Search />
-    {/* <CardList robots = {robots}/> */}
+      <h1> Robo freinds website</h1>
+      <Search />
     </div>
   );
-
 }
 
-export default Dashboard; 
+export default Dashboard;

@@ -1,34 +1,29 @@
 import { Card } from "@mui/material";
 
-export default function  MainPageItems(props) {
+export default function MainPageItems(props) {
+  // const BoyImage= "./BoysDress.jpg";
+  // const GirlsImage= "./gilrsDress.jpg";
+  // const CollectionImage= "./Collection.jpg";
+  // const Sale  = "./sale.jpg";
 
-    // const BoyImage= "./BoysDress.jpg";
-    // const GirlsImage= "./gilrsDress.jpg";
-    // const CollectionImage= "./Collection.jpg";
-    // const Sale  = "./sale.jpg";
+  return (
+    <div>
+      <Card>
+        <img src={props.image} alt="products" />
 
-    
-return(
-<div>
-<Card>
+        <caption> {props.title} </caption>
 
-<img src={props.image} alt="products" />
+        <a href={props.link}>View More</a>
+      </Card>
 
-<caption> {props.title} </caption>
-
-<a href={props.link}>View More</a>
-
-</Card>
-
-
-{/* <Card> */}
-{/* <img src={BoyImage} alt = "BoysImage"/>
+      {/* <Card> */}
+      {/* <img src={BoyImage} alt = "BoysImage"/>
 <caption> 
 Shop for Boys
 </caption>
 <a href="https://shonaz.in/product-category/boys/"> View More </a> */}
-{/* </Card> */}
-{/* <Card>
+      {/* </Card> */}
+      {/* <Card>
 <img src= {GirlsImage} alt="girls image"/>
 <caption> 
 Shop for Girls
@@ -36,7 +31,7 @@ Shop for Girls
 <a href="https://shonaz.in/product-category/girls/"> View More </a>
 </Card> */}
 
-{/* <Card>
+      {/* <Card>
 <img src={CollectionImage} alt="Collects image"/>
 <caption> 
 Shop for Collections
@@ -51,9 +46,6 @@ Sale
 </caption>
 <a href="https://shonaz.in/product-category/organic-cotton/" >View more</a>
 </Card> */}
-</div>
-
-
-);
-
+    </div>
+  );
 }

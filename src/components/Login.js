@@ -1,18 +1,14 @@
-import '../styles/Design.css';
+import "../styles/Design.css";
 import React, { useState } from "react";
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const  title = "Welcome";
+  const title = "Welcome";
   const signIn = "Sign In";
   const image = "./decipherZoneLogo.png";
 
-
-
-  const navogateUrl  = useNavigate();
+  const navogateUrl = useNavigate();
 
   // State to hold email, password, and errors
   const [values, setValues] = useState({ email: "" });
@@ -24,7 +20,6 @@ function Login() {
 
   const validateEmail = (email) =>
     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
-  
 
   // Function to handle form submission
   const handleSubmit = (e) => {
@@ -61,16 +56,16 @@ function Login() {
 
     if (!new_pass.match(lowerCase)) {
       setErrorpswrdMsg("Password should contain lowercase letters!");
-    } 
+    }
     // else if (!new_pass.match(upperCase)) {
     //   setErrorpswrdMsg("Password should contain uppercase letters!");
-    // } 
+    // }
     // else if (!new_pass.match(numbers)) {
     //   setErrorpswrdMsg("Password should contain numbers!");
-    // } 
+    // }
     // else if (new_pass.length < 10) {
     //   setErrorpswrdMsg("Password length should be at least 10 characters.");
-    // } 
+    // }
     else {
       setErrorpswrdMsg("Password is strong!");
     }
@@ -78,31 +73,28 @@ function Login() {
 
   // https://reqres.in/api/login
 
-
   //  post api email and password
-  // {  
-  //   "email": "eve.holt@reqres.in",  
-  //   "password": "pistol"  
-  // }  
-  const handleTheApi = () =>{
-  console.log(values, valuesPassword);
-     axios.post('https://reqres.in/api/login', {
-      email: values.email,
-      password: valuesPassword.password
-    }).then(function (result) {
-    localStorage.setItem('token', result.data.token); 
+  // {
+  //   "email": "eve.holt@reqres.in",
+  //   "password": "pistol"
+  // }
+  const handleTheApi = () => {
+    console.log(values, valuesPassword);
+    axios
+      .post("https://reqres.in/api/login", {
+        email: values.email,
+        password: valuesPassword.password,
+      })
+      .then(function (result) {
+        localStorage.setItem("token", result.data.token);
 
-      navogateUrl("/dashboard");
-      console.log(result);
-    })
-     .catch(function (error) {
-      console.log(error);
-     });
-  }
-
-
-
-
+        navogateUrl("/dashboard");
+        console.log(result);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="LoginMain">
@@ -135,11 +127,14 @@ function Login() {
 
             <br />
 
-            {errors.password && (
-              <p className="errorMsg">{errors.password}</p>
-            )}
+            {errors.password && <p className="errorMsg">{errors.password}</p>}
 
-            <input className="buttonDesign" type="submit" value="Submit" onClick={handleTheApi} />
+            <input
+              className="buttonDesign"
+              type="submit"
+              value="Submit"
+              onClick={handleTheApi}
+            />
           </section>
         </form>
       </div>
@@ -148,4 +143,3 @@ function Login() {
 }
 
 export default Login;
-
