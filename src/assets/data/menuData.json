@@ -1,0 +1,27 @@
+
+{
+    "menus": [
+      {
+        "category": "New",
+        "links": [
+          { "label": "Just In", "path": "/ProductPage" },
+          { "label": "Coming Soon", "path": "/ProductPage" }
+        ]
+      },
+      {
+        "category": "Shop",
+        "links": [
+          { "label": "Shop Boys", "path": "/ProductPage" },
+          { "label": "Shop Girls", "path": "/ProductPage" }
+        ]
+      },
+      {
+        "category": "Collection",
+        "links": [
+          { "label": "Organic Cotton Boys", "path": "/boysCollection" },
+          { "label": "Organic Cotton Girls", "path": "/ProductPage" }
+        ]
+      }
+    ]
+  }
+  
