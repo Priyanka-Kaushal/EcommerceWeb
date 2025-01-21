@@ -44,9 +44,7 @@ function App() {
           <Route path = "/Header" element  = {<Header />} /> */}
         </Routes>
         <Footer />
-          
         </TitleProvider>
-
       </Router>
     </Provider>
   );

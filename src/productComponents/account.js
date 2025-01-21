@@ -8,8 +8,8 @@ import { useMemo } from "react";
 import { loginSuccess, loginFailure } from "../prodRedux/action/LoginAction";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
@@ -21,9 +21,9 @@ function Login() {
   // const upperCase = /[A-Z]/g;
   // const numbers = /[0-9]/g;
 
-  // const lowerCase = useMemo(() => /[a-z]/g, []);
-  // const upperCase = useMemo(() => /[A-Z]/g, []);
-  // const numbers = useMemo(() => /[0-9]/g, []);
+  const lowerCase = useMemo(() => /[a-z]/g, []);
+  const upperCase = useMemo(() => /[A-Z]/g, []);
+  const numbers = useMemo(() => /[0-9]/g, []);
 
   const validateEmail = (email) =>
     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
